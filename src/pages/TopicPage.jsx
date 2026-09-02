@@ -3,6 +3,7 @@ import { ALL_TOPICS, TOPICS, getProblemId } from '../data/curriculum'
 import { useProgress } from '../context/ProgressContext'
 import DifficultyBadge from '../components/DifficultyBadge'
 import ProgressBar from '../components/ProgressBar'
+import CodeBlock from '../components/CodeBlock'
 
 function SectionHeading({ children }) {
   return (
@@ -91,9 +92,7 @@ export default function TopicPage() {
               <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
                 Code template
               </h3>
-              <pre className="overflow-x-auto rounded-lg border border-slate-800 bg-slate-900 p-4 text-xs leading-relaxed text-slate-100">
-                <code>{lesson.code}</code>
-              </pre>
+              <CodeBlock code={lesson.code} language="python" />
             </div>
           )}
 
